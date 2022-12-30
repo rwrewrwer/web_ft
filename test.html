@@ -1,0 +1,90 @@
+<!-- Chart.js v2.9.3 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<body>
+<div style="height: 500px;width: 800px;">
+    <canvas id="myChart" width="200" height="100"></canvas>
+    <script>
+    var ctx = document.getElementById("myChart");
+    var chart = new Chart(ctx, {
+      type: "line", // 圖表類型
+      data: {
+        labels: ["2001", "2002", "2003", "2004", "2005", "2006","2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"], //顯示區間名稱
+        datasets: [
+          {
+            label: "ptt足球版文章數", // tootip 出現的名稱
+            data: [2, 2704, 162, 70, 6, 3250, 1729, 873, 804, 983, 1091, 640, 321, 439, 1682, 898, 1146, 1303, 1064, 503, 436, 856], // 資料
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)", //bar 顏色
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)", // 外框線顏色
+             
+            ],
+            borderWidth: 1 // 外框線寬度
+          }
+        ]
+      }
+    });
+    </script></div>
+
+<div style="height: 500px;width: 800px">
+  <canvas id="myChart-1" width="200" height="100"></canvas>
+  <script>
+    var ctx = document.getElementById('myChart-1');
+    var myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['→', '推', '噓'],
+        datasets: [{
+          backgroundColor: [
+            'rgba(100, 162, 235, 0.5)',
+            'rgba(54, 255, 235, 0.5)',
+            'rgba(200, 162, 255, 0.5)',
+          ],
+          borderColor: 'rgba(0, 0, 0, 0)',
+          borderWidth: 0,
+          label: "ptt足球版 →, 推, 噓總數",
+          data: [108424, 130012, 4714,],
+          fill: false, // 是否填滿色彩
+        }]
+      },
+      options: {
+        legend: {
+          labels: {
+            fontColor: 'black' // 標籤顏色 
+          }
+        }
+      }
+    });
+  </script></div>
+  <div style="height: 500px;width: 800px">
+    <canvas id="myChart-2" width="200" height="100"></canvas>
+    <script>
+      var ctx = document.getElementById('myChart-2');
+      var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['→', '推', '噓'],
+          datasets: [{
+            backgroundColor: [
+              'rgba(100, 162, 235, 0.5)',
+              'rgba(54, 255, 235, 0.5)',
+              'rgba(200, 162, 255, 0.5)',
+            ],
+            borderColor: 'rgba(0, 0, 0, 0)',
+            borderWidth: 0,
+            label: "ptt足球版 →, 推, 噓總數",
+            data: [0.3765, 0.605549, 0.017918,],
+            fill: false, // 是否填滿色彩
+          }]
+        },
+        options: {
+          legend: {
+            labels: {
+              fontColor: 'black' // 標籤顏色 
+            }
+          }
+        }
+      });
+    </script></div>
+</body>
